@@ -23,4 +23,5 @@ public class MoodEntry extends BaseEntity {
 
     @OneToOne(mappedBy = "moodEntry", cascade = CascadeType.ALL)
     private MoodAnalysis analysis;
+
 }
