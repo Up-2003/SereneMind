@@ -33,9 +33,17 @@ public class User extends BaseEntity {
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private UserProfile profile;
 
+    private boolean isActive;
+
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<MoodEntry> moods;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Journal> journals;
+    private LocalDateTime lastLogin;
+    private LocalDateTime loginTime;
+
+    public UserProfile getUserProfile() {
+        return profile;
+    }
 }
