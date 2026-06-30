@@ -1,7 +1,8 @@
 package com.mental.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import com.mental.model.entity.enums.MeditationCategory;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,8 +12,22 @@ import lombok.Setter;
 @Setter
 public class Meditation extends BaseEntity {
 
+    @NotBlank
+    @Column(nullable = false)
     private String title;
-    private String category;
-    private int duration;
+
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private MeditationCategory category;
+
+
+    @Column(nullable = false)
+    private Integer duration; // seconds
+
+
     private String audioUrl;
+
+
+    private String description;
 }

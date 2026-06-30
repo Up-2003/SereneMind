@@ -35,6 +35,7 @@ public class AuthService {
 
         UserProfile profile = new UserProfile();
         profile.setUser(user);
+        profile.setAvatar("avatar-1");
         user.setProfile(profile);
 
         users.save(user);
