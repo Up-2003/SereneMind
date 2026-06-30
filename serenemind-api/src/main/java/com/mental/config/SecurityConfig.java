@@ -1,5 +1,6 @@
-package com.mental.security;
+package com.mental.config;
 
+import com.mental.security.JwtFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

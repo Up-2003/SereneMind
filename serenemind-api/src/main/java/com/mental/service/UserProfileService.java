@@ -42,7 +42,15 @@ public class UserProfileService {
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
 
+
         UserProfile profile = user.getProfile();
+
+        if (profile == null) {
+            profile = new UserProfile();
+            profile.setUser(user);
+            user.setProfile(profile);
+        }
+
         profile.setFullname(request.getFullname());
         profile.setAvatar(request.getAvatar());
         profile.setBirthday(request.getBirthday());
