@@ -1,0 +1,7 @@
+TEAM_ID=
+
+PRODUCT_NAME=serenemind-frontend
+PRODUCT_BUNDLE_IDENTIFIER=com.mental.serenemind-frontend$(TEAM_ID)
+
+CURRENT_PROJECT_VERSION=1
+MARKETING_VERSION=1.0

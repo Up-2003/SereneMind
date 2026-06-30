@@ -1,9 +1,7 @@
 package com.mental.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,8 +13,9 @@ import java.time.LocalDate;
 @Setter
 public class UserProfile extends BaseEntity {
 
-    @OneToOne
-    @JoinColumn(name = "user_id")
+    @JsonIgnore
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false, unique = true)
     private User user;
 
     private String fullname;
