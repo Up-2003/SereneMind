@@ -22,6 +22,7 @@ class ApiService {
             response.bodyAsText()
         } catch (e: Exception) {
             "Error: ${e.localizedMessage}"
+            
         }
     }
 }
