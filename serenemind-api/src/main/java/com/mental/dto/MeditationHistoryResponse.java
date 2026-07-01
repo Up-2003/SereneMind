@@ -9,6 +9,7 @@ import java.time.Instant;
 @Builder
 public class MeditationHistoryResponse {
 
+
     private String title;
 
     private Integer duration;

@@ -15,6 +15,11 @@ public class Journal extends BaseEntity {
 
     private String title;
 
+    private String content;
+    private boolean flagged;
+    private String flagReason;
+
+
     @Lob
     private String encryptedText;
 
