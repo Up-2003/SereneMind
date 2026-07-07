@@ -8,7 +8,6 @@ import com.serenemind.navigation.AppNavigation
 import com.serenemind.network.NetworkModule
 import com.serenemind.repository.AuthRepository
 import com.serenemind.ui.login.LoginViewModel
-import com.serenemind.ui.theme.SerenemindclientTheme
 
 class MainActivity : ComponentActivity() {
 
